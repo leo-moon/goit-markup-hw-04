@@ -393,10 +393,10 @@ nl {
     fill: #AFB1B8;
 }
 
-.team-icons:hover,
+/* .team-icons:hover,
 .team-icons:focus {
     fill: #2196F3;
-}
+} */
 
 .team-b-icons {
     width: 44px;
