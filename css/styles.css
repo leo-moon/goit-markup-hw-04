@@ -125,10 +125,8 @@ nl {
 }
 
 .email {
-    margin-left: auto;
     margin-right: 30px;
-
-    color: #757575;
+    margin-left: auto;
 }
 
 .email,
@@ -150,28 +148,48 @@ nl {
     margin-right: 10px;
     background-repeat: no-repeat;
     background-size: contain;
+    color: #757575;
+    fill: #757575;
 }
 
 .email::before {
     width: 16px;
     height: 12px;
-    background-image: url(../images/header/envelope.svg);
+    /* background-image: url(../images/main/header-symbols.svg#envelope); */
+    /* background-image: url(../images/main/header/symbols-header.svg#icon-envelope); */
+    background-image: url(../images/main/header/envelope.svg);
+    
 }
 
 .tel::before {
     width: 10px;
     height: 16px;
-    background-image: url(../images/header/smartphone.svg);
+    background-image: url(../images/main/header/smartphone.svg);
+    /* background-image: url('../images/main/header-symbols.svg#smartphone'); */
+    /* color: #757575;
+    fill: #757575; */
 }
 
-.email:hover::before {
+/* .tel:hover::before,
+.tel:focus::before {
     fill: var(--accent-color);
     color: var(--accent-color);
-    background-image: url(../images/header/envelope-hover.svg);
+} */
+
+.tel:hover::before,
+.tel:focus::before {
+    background-image: url(../images/main/header/smartphone-hover.svg);
+}
+
+.email:hover::before,
+.email:focus::before {    
+    background-image: url(../images/main/header/envelope-hover.svg);
 }
 
 .email:hover,
-.email:focus {
+.email:focus,
+.tel:hover,
+.tel:focus {
     color: var(--accent-color);
 }
 
@@ -375,8 +393,8 @@ nl {
     fill: #AFB1B8;
 }
 
-.team-icons:hover{
-    color: teal;
+.team-icons:hover,
+.team-icons:focus {
     fill: #2196F3;
 }
 
@@ -386,12 +404,16 @@ nl {
     border: none;
     padding: 0;    
     background-color: #fff;
+    border-color: #FFFFFF;
 }
 
-.team-b-icons:hover {
+.team-b-icons:hover,
+.team-b-icons:focus {
     border-radius: 50%;
     fill: #FFFFFF;
     background-color: #2196F3;
+    border: #2196F3;
+    outline: none;
 }
 
 .team-list {
@@ -441,7 +463,9 @@ nl {
     fill: #AFB1B8;
 }
 
-.clients-button-icons:hover {
+.clients-button-icons:hover,
+.clients-button-icons:focus {
+    outline: none;
     border: 1px solid var(--accent-color);
     fill: var(--accent-color);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -528,11 +552,13 @@ nl {
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
     fill: #FFFFFF;
+    outline: none;
 }
 
 .footer-b-icons:hover,
 .footer-b-icon:focus {
     background: #2196F3;
+    outline: none;
 }
 
 .footer-icon {
@@ -603,6 +629,7 @@ nl {
     background-color: #2196F3;
     color: #FFFFFF;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    outline: none;
 }
 
 .port-projects {
