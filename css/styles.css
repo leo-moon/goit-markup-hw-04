@@ -154,26 +154,15 @@ nl {
 .email::before {
     width: 16px;
     height: 12px;
-    /* background-image: url(../images/main/header-symbols.svg#envelope); */
-    /* background-image: url(../images/main/header/symbols-header.svg#icon-envelope); */
     background-image: url(../images/main/header/envelope.svg);
-    
+    fill: #757575;
 }
 
 .tel::before {
     width: 10px;
     height: 16px;
     background-image: url(../images/main/header/smartphone.svg);
-    /* background-image: url('../images/main/header-symbols.svg#smartphone'); */
-    /* color: #757575;
-    fill: #757575; */
 }
-
-/* .tel:hover::before,
-.tel:focus::before {
-    fill: var(--accent-color);
-    color: var(--accent-color);
-} */
 
 .tel:hover::before,
 .tel:focus::before {
@@ -195,8 +184,15 @@ nl {
 
 /*==================== /HEADER ====================*/
 
-/*==================== MAIN ====================*/
 
+
+
+
+
+
+
+/*==================== MAIN ====================*/
+/* =================== HERO ====================*/
 .hero {    
     width: 1600px;
     margin-left: auto;
@@ -255,6 +251,17 @@ nl {
     border-color: #FFFFFF;
 }
 
+/* =================== /HERO ====================*/
+
+
+
+
+
+
+
+
+/* =================== destination ====================*/
+
 .destination {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -272,9 +279,10 @@ nl {
 
 .dest-befor {
     height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #F5F4FA;
-    text-align: center;
-    padding-top: 25px;
 }
 
 .dest-befor:hover {
@@ -286,7 +294,13 @@ nl {
     width: 70px;
     height: 70px;
 }
+/* =================== /destination ====================*/
 
+
+
+
+
+/* =================== business-photo ====================*/
 .title-item {
     font-weight: 700;
     font-size: 14px;
@@ -331,7 +345,17 @@ nl {
 .business-photo-img {
     width: calc((100% - 30px*2)/3);
 }
+/* =================== /business-photo ====================*/
 
+
+
+
+
+
+
+
+
+/* =================== personal ====================*/
 .personal {
     background-color: #F5F4FA;
     padding-top: 94px;
@@ -394,22 +418,23 @@ nl {
     fill: #AFB1B8;
 }
 
-/* .team-icons:hover,
-.team-icons:focus {
-    fill: #2196F3;
-} */
-
-.team-b-icons {
-    width: 44px;
-    height: 44px;
-    border: none;
-    padding: 0;    
-    background-color: #fff;
-    border-color: #FFFFFF;
+.team-icon-list {
+    width:calc((100% - 3 * 10px)/4);
 }
 
-.team-b-icons:hover,
-.team-b-icons:focus {
+.team-a-icons {
+    width: 100%;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-color: #FFFFFF;
+    fill: #757575;
+}
+
+.team-a-icons:hover,
+.team-a-icons:focus {
     border-radius: 50%;
     fill: #FFFFFF;
     background-color: #2196F3;
@@ -418,21 +443,21 @@ nl {
 }
 
 .team-list {
+    content: "";
     background-repeat: no-repeat;
     width: 20px;
     height: 20px;
-    padding: auto;
     background-size: contain;
 }
+/* =================== /personal ====================*/
 
-.team-icon {
-    content: "";
-    background-color: #0bb;
-}
 
+
+
+
+/* =================== clients ====================*/
 .clients {
     padding: 94px 0px;
-    /* background-color: #fff; */
 }
 
 .clients-title {
@@ -451,32 +476,36 @@ nl {
     justify-content: space-between;
 }
 
-/* .clients-icon-list {
-    width:calc((100% - 5*30px)/6) ;
-} */
-
-.clients-button-icons {
-    width: 170px;
+.clients-icon-list {
+    width:calc((100% - 5*30px)/6);
     height: 92px;
+}
+
+.clients-link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #fff;
     border: 1px solid #AFB1B8;
-    border-radius: 4px; 
+    border-radius: 4px;
     fill: #AFB1B8;
 }
 
-.clients-button-icons:hover,
-.clients-button-icons:focus {
+.clients-link:focus,
+.clients-link:hover {
     outline: none;
     border: 1px solid var(--accent-color);
     fill: var(--accent-color);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .clients-list {
     width: 106px;
     height: 60px;
+    border: none;
 }
-
+/* =================== /clients ====================*/
 /*==================== /MAIN ====================*/
 
 /*==================== FOOTER ====================*/
@@ -545,10 +574,7 @@ nl {
     width: 204px;
 }
 
-.footer-b-icons {
-    padding: 0;
-    width: 44px;
-    height: 44px;
+.footer-a-icons {
     border: 0;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
